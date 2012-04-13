@@ -75,6 +75,33 @@ SlideDeck.prototype.onDomLoaded_ = function(e) {
 SlideDeck.prototype.addEventListeners_ = function() {
   document.addEventListener('keydown', this.onBodyKeyDown_.bind(this), false);
   window.addEventListener('popstate', this.onPopState_.bind(this), false);
+
+  var slides = document.querySelector('slides');
+  slides.addEventListener('slideenter',
+                          this.handleSlideMovement_.bind(this), false);
+  slides.addEventListener('slideleave',
+                          this.handleSlideMovement_.bind(this), false);
+};
+
+/**
+ * @private
+ * Callback to perform generic tasks on slideenter/slideleave events.
+ */
+SlideDeck.prototype.handleSlideMovement_ = function(e) {
+  var slide = e.target;
+  var gdbar = slide.querySelector('aside[is="x-gdbar"]');
+  if (gdbar) {
+    if (e.type == 'slideenter') {
+      // Need slight delay here for case where you're on the current slide
+      // and the animation needs to run. This is because the web compontents
+      // polyfill fires on DOMContentLoaded (e.g. a race condition).
+      setTimeout(function() {
+        gdbar.classList.add('active');
+      }, 5);
+    } else {
+      gdbar.classList.remove('active');
+    }
+  }
 };
 
 /**

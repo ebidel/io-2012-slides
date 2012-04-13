@@ -12,6 +12,8 @@ URL: https://code.google.com/p/io-2012-slides
   <title>Title</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="components" href="x-gdbar.html">
+  <script src="js/polyfills/components-polyfill.js"></script>
 </head>
 <body style="opacity: 0;">
 
@@ -24,7 +26,8 @@ URL: https://code.google.com/p/io-2012-slides
   </slide>
 
   <slide class="title-slide segue nobackground">
-    <aside class="gdbar"><img src="images/google_developers_icon_128.png"></aside>
+    <!--<aside class="gdbar"><img src="images/google_developers_icon_128.png"></aside>-->
+    <aside is="x-gdbar"></aside>
     <!-- The content of this hgroup is replaced programmatically through the config. -->
     <hgroup class="auto-fadein">
       <h1 data-config-title><!-- populated from config --></h1>
