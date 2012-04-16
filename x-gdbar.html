@@ -69,7 +69,20 @@ aside img {
 aside.active {
   background-size: 100% 100%;
 }
+
+/*.current :host aside {
+  
+}*/
 </style>
+<!--<style>
+/* When :host starts working us above. Until then we're stuck with this.
+   in an unscoped style. */
+.current aside[is=x-gdbar] aside {
+  background-size: 100% 100%;
+  opacity: 0;
+}
+</style>
+-->
 <aside>
   <img src="images/google_developers_icon_128.png">
 </aside>
@@ -81,6 +94,7 @@ this.lifecycle({
   created: function(root) {
     shadowRoot = root;
   },
+  // TODO: use css :host selector instead of doing this in JS.
   attributeChanged: function(name, oldValue, newValue) {
     if (name == 'class') {
       shadowRoot.querySelector('aside').className = newValue;
