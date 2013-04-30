@@ -1,5 +1,4 @@
 @import "compass/css3/background-size";
-@import "compass/css3/box-sizing";
 
 @import "variables";
 
@@ -20,31 +19,6 @@ q, blockquote {
 
 slides > slide {
   color: $gray-4;
-  
-  $grayBarHeight: 90px;
-
-  // Grey bottom bar.
-  &:not(.nobackground) {
-    &:before {
-      background: none;
-      background-color: $gray-1;
-      height: $grayBarHeight;
-      left: 0;
-      width: 100%;
-      bottom: 0;
-    }
-    &:after {
-      background: url(../../images/google_developers_icon_128.png) no-repeat 0 0;
-      @include background-size($brand-small-icon-size);
-      background-position: $slide-left-right-padding 50%;
-      left: 0;
-      bottom: $grayBarHeight;
-      width: 100%;
-      @include box-sizing(border-box);
-      text-align: right;
-      padding-right: $slide-left-right-padding;
-    }
-  }
 
   &.title-slide {
     &:after {
@@ -74,17 +48,4 @@ slides > slide {
       }
     }
   }
-  
-  .source {
-    bottom: $grayBarHeight + 40;
-  }
-  
-  > article:only-child {
-    height: 88%
-  }
-  
-  > article:only-child > iframe {
-   height: 100%;
-  }
-  
 }
