@@ -30,11 +30,8 @@ slides > slide:not(.nobackground):before {
   left: 0;
   width: 100%;
   bottom: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
 }
-/* line 37, ../scss/io2013.scss */
+/* line 36, ../scss/io2013.scss */
 slides > slide:not(.nobackground):after {
   background: url(../../images/google_developers_icon_128.png) no-repeat 0 0;
   -webkit-background-size: 30px;
@@ -51,7 +48,7 @@ slides > slide:not(.nobackground):after {
   text-align: right;
   padding-right: 60px;
 }
-/* line 51, ../scss/io2013.scss */
+/* line 50, ../scss/io2013.scss */
 slides > slide.title-slide:after {
   content: '';
   background: url(../../images/io2013/google-io-lockup-1.png) no-repeat 100% 50%;
@@ -65,32 +62,32 @@ slides > slide.title-slide:after {
   width: 100%;
   height: 90px;
 }
-/* line 63, ../scss/io2013.scss */
+/* line 62, ../scss/io2013.scss */
 slides > slide.title-slide hgroup h1 {
   font-weight: bold;
   line-height: 1.1;
 }
-/* line 67, ../scss/io2013.scss */
+/* line 66, ../scss/io2013.scss */
 slides > slide.title-slide hgroup h2, slides > slide.title-slide hgroup p {
   color: #515151;
 }
-/* line 70, ../scss/io2013.scss */
+/* line 69, ../scss/io2013.scss */
 slides > slide.title-slide hgroup h2 {
   margin-top: 0.25em;
 }
-/* line 73, ../scss/io2013.scss */
+/* line 72, ../scss/io2013.scss */
 slides > slide.title-slide hgroup p {
   margin-top: 3em;
 }
-/* line 79, ../scss/io2013.scss */
+/* line 78, ../scss/io2013.scss */
 slides > slide .source {
   bottom: 130px;
 }
-/* line 83, ../scss/io2013.scss */
+/* line 82, ../scss/io2013.scss */
 slides > slide > article:only-child {
   height: 88%;
 }
-/* line 87, ../scss/io2013.scss */
+/* line 86, ../scss/io2013.scss */
 slides > slide > article:only-child > iframe {
   height: 100%;
 }

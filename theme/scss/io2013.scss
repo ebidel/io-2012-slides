@@ -32,7 +32,6 @@ slides > slide {
       left: 0;
       width: 100%;
       bottom: 0;
-      @include box-sizing(border-box);
     }
     &:after {
       background: url(../../images/google_developers_icon_128.png) no-repeat 0 0;
